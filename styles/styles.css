@@ -651,7 +651,26 @@ section {
 /*Independed components*/
 .btn-con {
   display: flex;
-  align-self: flex-start;
+  align-items: center;
+  gap: 10px;
+}
+.social-links {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+}
+@media screen and (max-width: 768px) {
+  .btn-con {
+      flex-direction: column;
+      align-items: center;
+  }
+  .social-links {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      gap: 20px;
+      width: 100%;
+  }
 }
 
 .main-btn {
@@ -993,4 +1012,78 @@ section {
   }
 }
 
+@media (max-width: 768px) {
+  .skills-content {
+      grid-template-columns: 1fr; 
+  }
+}
+
 /*# sourceMappingURL=styles.css.map */
+.skills-content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 20px;
+}
+.skill-category {
+  background-color: #ffffff;
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease-in-out;
+  text-align: center;
+  width: calc(25% - 20px);
+  min-height: 320px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+@media screen and (max-width: 1024px) {
+  .skill-category {
+      width: calc(50% - 20px);
+  }
+}
+@media screen and (max-width: 768px) {
+  .skills-content {
+      flex-direction: column;
+      align-items: center;
+  }
+  .skill-category {
+      width: 100%;
+  }
+}
+.category-title {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 15px;
+  color: #454e56;
+  text-align: center;
+  margin-top: 10px;
+}
+.skills-list {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex-grow: 1;
+}
+.skills-list li {
+  font-size: 1rem;
+  margin: 10px 0;
+  color: #555;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.skills-list i {
+  color: #28a745;
+}
+
+.skill-category:hover {
+  cursor: default;
+  transform: translateY(-5px);
+  border: 1px solid var(--color-secondary);
+  box-shadow: 1px 4px 15px rgba(0, 0, 0, 0.32);
+}
