@@ -1036,21 +1036,20 @@ section {
   min-height: 320px;
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
 }
-@media screen and (max-width: 1024px) {
-  .skill-category {
-      width: calc(50% - 20px);
-  }
-}
 @media screen and (max-width: 768px) {
-  .skills-content {
-      flex-direction: column;
-      align-items: center;
-  }
   .skill-category {
       width: 100%;
+  }
+  .mobile-extra {
+      display: block;
+      height: 20px;
+  }
+}
+@media screen and (min-width: 769px) {
+  .mobile-extra {
+      display: none;
   }
 }
 .category-title {
@@ -1067,6 +1066,7 @@ section {
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: flex-start;
   flex-grow: 1;
 }
 .skills-list li {
