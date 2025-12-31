@@ -1,310 +1,811 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" href="img/icon.png" type="image">
-    <title>Hanumant Lad | Java Developer | Backend & Frontend Expertise</title>
-    <link rel="stylesheet" href="styles/styles.css">
+    <meta name="description" content="Hanumant Lad - Senior Java Full Stack Developer with 4+ years of experience in Multi-Tenant SaaS, Payment Orchestration, and Enterprise Architecture">
+    <meta name="keywords" content="Java Developer, Spring Boot, Angular, Multi-Tenant SaaS, Payment Gateway, SAP Integration, Full Stack Developer, Microservices">
+    <meta name="author" content="Hanumant Lad">
+    <meta property="og:title" content="Hanumant Lad | Senior Java Full Stack Developer">
+    <meta property="og:description" content="Building enterprise-grade, multi-tenant SaaS applications with expertise in Payment Systems and SAP Integration">
+    <title>Hanumant Lad | Senior Java Full Stack Developer  | Backend & Frontend Expertise</title>
+    <link rel="icon" href="img/icon.png" type="image/png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
-        integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap"
-        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="styles/styles.css">
 </head>
-
-<body class="main-content">
-    <header class="container header active" id="home">
-        <div class="header-content">
-            <div class="left-header">
-                <div class="h-shape"></div>
-                <div class="image">
-                    <img src="./img/Self.png" alt="Hanumant Lad">
-                </div>
+<body>
+    <!-- Loader -->
+    <div class="loader" id="loader">
+        <div class="loader-content">
+            <div class="loader-code">
+                <span class="bracket">{</span>
+                <span class="dots">...</span>
+                <span class="bracket">}</span>
             </div>
-            <div class="right-header">
-                <h1 class="name">
-                    Hi, I'm <span>Hanumant Lad.</span>
+            <p>Loading Portfolio</p>
+        </div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="#home" class="nav-logo">
+                <span class="logo-bracket">&lt;</span>
+                <span class="logo-text">CL</span>
+                <span class="logo-bracket">/&gt;</span>
+            </a>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="#home" class="nav-link active" data-section="home">Home</a></li>
+                <li><a href="#about" class="nav-link" data-section="about">About</a></li>
+                <li><a href="#experience" class="nav-link" data-section="experience">Experience</a></li>
+                <li><a href="#skills" class="nav-link" data-section="skills">Skills</a></li>
+                <li><a href="#projects" class="nav-link" data-section="projects">Projects</a></li>
+                <li><a href="#contact" class="nav-link" data-section="contact">Contact</a></li>
+            </ul>
+            <div class="nav-actions">
+                <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode">
+                    <i class="fas fa-moon" id="themeIcon"></i>
+                </button>
+                <a href="https://drive.google.com/file/d/13S1lS5jzIkR6lmbYDG0ET6ah_eJIiQQZ/view?usp=sharing" target="_blank" class="nav-btn">
+                    <span>Resume</span>
+                    <i class="fas fa-download"></i>
+                </a>
+                <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-bg">
+            <div class="hero-gradient"></div>
+            <div class="hero-grid"></div>
+        </div>
+        <div class="hero-container">
+            <div class="hero-content">
+                <div class="hero-badge">
+                    <span class="badge-dot"></span>
+                    <span>Available for opportunities</span>
+                </div>
+                <h1 class="hero-title">
+                    <span class="greeting">Hi, I'm</span>
+                    <span class="name">Hanumant Lad</span>
                 </h1>
-                <p>
-                    Results-driven Java professional with 3+ years of experience in developing scalable web applications using 
-                    Java, Spring Boot, Kafka, Angular, and PostgreSQL. Specialized in designing modular architectures, improving system performance, 
-                    and optimizing processes to deliver high-quality solutions. 
-                    Proven track record of reducing transaction times, lowering infrastructure costs, and enhancing user satisfaction through 
-                    innovative development.
+                <h2 class="hero-subtitle">
+                    <span class="typing-text" id="typingText"></span>
+                    <span class="cursor">|</span>
+                </h2>
+                <p class="hero-description">
+                    I build <span class="highlight">enterprise-grade</span>, <span class="highlight">multi-tenant SaaS</span> applications 
+                    with <span class="highlight">4+ years</span> of experience. Specialized in 
+                    <span class="highlight">Payment Orchestration</span>, <span class="highlight">SAP Integration</span>, 
+                    and <span class="highlight">Microservices Architecture</span>.
                 </p>
-                <div class="btn-con" style="display: flex; gap: 20px; align-items: center; justify-content: center;">
-                    <a href="https://drive.google.com/file/d/13S1lS5jzIkR6lmbYDG0ET6ah_eJIiQQZ/view?usp=sharing"
-                        class="main-btn" target="_blank">
-                        <span class="btn-text">Download Resume</span>
-                        <span class="btn-icon"><i class="fas fa-download"></i></span>
+                <div class="hero-stats">
+                    <div class="stat-item">
+                        <span class="stat-number" data-count="4">0</span>
+                        <span class="stat-plus">+</span>
+                        <span class="stat-label">Years Experience</span>
+                    </div>
+                    <div class="stat-divider"></div>
+                    <div class="stat-item">
+                        <span class="stat-number" data-count="5">0</span>
+                        <span class="stat-plus">+</span>
+                        <span class="stat-label">Enterprise Projects</span>
+                    </div>
+                    <div class="stat-divider"></div>
+                    <div class="stat-item">
+                        <span class="stat-number">99.99</span>
+                        <span class="stat-plus">%</span>
+                        <span class="stat-label">Payment Success</span>
+                    </div>
+                </div>
+                <div class="hero-cta">
+                    <a href="#contact" class="btn btn-primary">
+                        <span>Let's Talk</span>
+                        <i class="fas fa-arrow-right"></i>
                     </a>
-                    <div class="social-links">
-                    <a href="https://www.linkedin.com/in/hanumantlad/" target="_blank"
-                        style="text-decoration: none; color: #007bff; font-size: 32px; transition: transform 0.3s ease, color 0.3s ease;">
+                    <a href="#projects" class="btn btn-outline">
+                        <span>View Projects</span>
+                        <i class="fas fa-folder-open"></i>
+                    </a>
+                </div>
+                <div class="hero-social">
+                    <a href="https://www.linkedin.com/in/Hanumantlad/" target="_blank" aria-label="LinkedIn" class="social-link">
                         <i class="fab fa-linkedin-in"></i>
                     </a>
-                    <a href="https://github.com/HNLad" target="_blank"
-                        style="text-decoration: none; color: #007bff; font-size: 32px; transition: transform 0.3s ease, color 0.3s ease;">
+                    <a href="https://github.com/HNLad" target="_blank" aria-label="GitHub" class="social-link">
                         <i class="fab fa-github"></i>
                     </a>
+                    <a href="mailto:Hanumantlad100@gmail.com" aria-label="Email" class="social-link">
+                        <i class="fas fa-envelope"></i>
+                    </a>
+                    <a href="https://wa.me/918766719895" target="_blank" aria-label="WhatsApp" class="social-link">
+                        <i class="fab fa-whatsapp"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="hero-visual">
+                <div class="code-window">
+                    <div class="window-header">
+                        <div class="window-dots">
+                            <span class="dot red"></span>
+                            <span class="dot yellow"></span>
+                            <span class="dot green"></span>
+                        </div>
+                        <span class="window-title">HanumantLad.java</span>
+                        <div class="window-actions">
+                            <i class="fas fa-minus"></i>
+                            <i class="fas fa-square"></i>
+                            <i class="fas fa-times"></i>
+                        </div>
+                    </div>
+                    <div class="window-content">
+                        <pre><code><span class="line-num">1</span>  <span class="keyword">@Component</span>
+<span class="line-num">2</span>  <span class="keyword">public class</span> <span class="class-name">HanumantLad</span> <span class="keyword">implements</span> <span class="interface">Developer</span> {
+<span class="line-num">3</span>  
+<span class="line-num">4</span>      <span class="keyword">private final</span> String role = <span class="string">"Senior Full Stack Developer"</span>;
+<span class="line-num">5</span>      <span class="keyword">private final int</span> experience = <span class="number">4</span>;
+<span class="line-num">6</span>  
+<span class="line-num">7</span>      <span class="keyword">private final</span> List&lt;String&gt; expertise = List.of(
+<span class="line-num">8</span>          <span class="string">"Multi-Tenant SaaS Architecture"</span>,
+<span class="line-num">9</span>          <span class="string">"Payment Orchestration Systems"</span>,
+<span class="line-num">10</span>         <span class="string">"SAP Integration (FICA/FIAR)"</span>,
+<span class="line-num">11</span>         <span class="string">"Microservices & Design Patterns"</span>
+<span class="line-num">12</span>     );
+<span class="line-num">13</span> 
+<span class="line-num">14</span>     <span class="annotation">@Override</span>
+<span class="line-num">15</span>     <span class="keyword">public</span> Solution <span class="method">solve</span>(Problem problem) {
+<span class="line-num">16</span>         <span class="keyword">return</span> DesignPatterns
+<span class="line-num">17</span>             .using(<span class="class-name">Factory</span>, <span class="class-name">Strategy</span>, <span class="class-name">Adapter</span>)
+<span class="line-num">18</span>             .apply(problem)
+<span class="line-num">19</span>             .withQuality(<span class="string">"Production-Ready"</span>)
+<span class="line-num">20</span>             .build();
+<span class="line-num">21</span>     }
+<span class="line-num">22</span> }</code></pre>
+                    </div>
+                </div>
+                <div class="floating-badges">
+                    <div class="float-badge badge-1">
+                        <i class="fab fa-java"></i>
+                        <span>Java 17</span>
+                    </div>
+                    <div class="float-badge badge-2">
+                        <i class="fab fa-angular"></i>
+                        <span>Angular 19</span>
+                    </div>
+                    <div class="float-badge badge-3">
+                        <i class="fas fa-leaf"></i>
+                        <span>Spring Boot</span>
                     </div>
                 </div>
             </div>
         </div>
-    </header>
-    <main>
-        <section class="container about" id="about">
-            <div class="main-title">
-                <h2>About <span>Me</span><span class="bg-text">About Me</span></h2>
+        <div class="scroll-indicator">
+            <span>Scroll to explore</span>
+            <div class="scroll-line"></div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">&lt;about&gt;</span>
+                <h2 class="section-title">About Me</h2>
+                <p class="section-subtitle">Get to know my background and what drives me</p>
             </div>
-            <div class="about-container">
-                <div class="left-about">
-                    <h4>Professional Background</h4>
-                    <p>
-                        I specialize in developing scalable applications with microservices architecture. My expertise
-                        includes designing RESTful APIs, integrating Kafka for real-time messaging, and implementing
-                        payment gateway solutions. Passionate about continuous learning and optimizing system
-                        performance.
-                        Please review my portfolio, and I look forward to discussing how I can contribute value to your
-                        organization. Let's connect soon!
-                        Thank you for visiting my website..! 😊
+            <div class="about-content">
+                <div class="about-image-wrapper">
+                    <div class="about-image">
+                        <img src="./img/Self.png" alt="Hanumant Lad - Senior Java Full Stack Developer" loading="lazy">
+                        <div class="image-border"></div>
+                    </div>
+                    <div class="experience-card">
+                        <span class="exp-number">4+</span>
+                        <span class="exp-text">Years of<br>Experience</span>
+                    </div>
+                </div>
+                <div class="about-text">
+                    <h3>Senior Java Full Stack Developer</h3>
+                    <p class="about-intro">
+                        I'm a passionate developer who loves turning complex business requirements into 
+                        elegant, scalable software solutions. My journey in tech has been driven by 
+                        curiosity and a commitment to excellence.
                     </p>
-                    <div class="btn-con" style="display: flex; gap: 20px; align-items: center; justify-content: center;">
-                        <a href="https://drive.google.com/file/d/13S1lS5jzIkR6lmbYDG0ET6ah_eJIiQQZ/view?usp=sharing"
-                            class="main-btn" target="_blank">
-                            <span class="btn-text">Download Resume</span>
-                            <span class="btn-icon"><i class="fas fa-download"></i></span>
+                    <div class="about-details">
+                        <div class="detail-block">
+                            <h4><i class="fas fa-building"></i> Currently</h4>
+                            <p>
+                                At <strong>Acuiti Labs</strong>, I'm developing the <strong>Q2C Customer Portal</strong> — 
+                                a multi-tenant SaaS platform for SAP Quote-to-Cash solutions. I architect 
+                                payment orchestration systems supporting multiple gateways with complete tenant 
+                                isolation, and integrate with SAP FICA/FIAR for real-time reconciliation.
+                            </p>
+                        </div>
+                        <div class="detail-block">
+                            <h4><i class="fas fa-history"></i> Previously</h4>
+                            <p>
+                                At <strong>NCDEX e Markets</strong>, I built high-volume trading systems 
+                                processing <strong>1M+ daily transactions</strong>, integrated 4 major payment 
+                                gateways achieving <strong>99.99% success rate</strong>, and led the transition 
+                                to Dockerized microservices architecture.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="about-highlights">
+                        <div class="highlight-item">
+                            <i class="fas fa-cogs"></i>
+                            <span>Set up CI/CD with Jenkins & SonarQube quality gates</span>
+                        </div>
+                        <div class="highlight-item">
+                            <i class="fas fa-users"></i>
+                            <span>Conduct technical interviews for fresher positions</span>
+                        </div>
+                        <div class="highlight-item">
+                            <i class="fas fa-code-branch"></i>
+                            <span>70% code reduction via Factory & Strategy patterns</span>
+                        </div>
+                        <div class="highlight-item">
+                            <i class="fas fa-rocket"></i>
+                            <span>Zero-code tenant onboarding via YAML configuration</span>
+                        </div>
+                    </div>
+                    <div class="about-cta">
+                        <a href="#contact" class="btn btn-primary">
+                            <span>Get In Touch</span>
+                            <i class="fas fa-arrow-right"></i>
                         </a>
+                        <a href="https://drive.google.com/file/d/13S1lS5jzIkR6lmbYDG0ET6ah_eJIiQQZ/view?usp=sharing" target="_blank" class="btn btn-outline">
+                            <span>Download CV</span>
+                            <i class="fas fa-download"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="section-footer">
+                <span class="section-tag">&lt;/about&gt;</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section id="experience" class="experience section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">&lt;experience&gt;</span>
+                <h2 class="section-title">Work Experience</h2>
+                <p class="section-subtitle">My professional journey and career growth</p>
+            </div>
+            <div class="timeline">
+                <!-- Acuiti Labs -->
+                <div class="timeline-item">
+                    <div class="timeline-marker">
+                        <div class="marker-dot"></div>
+                        <div class="marker-line"></div>
+                    </div>
+                    <div class="timeline-content">
+                        <div class="timeline-header">
+                            <div class="company-logo">
+                                <i class="fas fa-building"></i>
+                            </div>
+                            <div class="company-info">
+                                <h3>Acuiti Labs</h3>
+                                <p class="role">Senior Software Engineer — Product Development</p>
+                                <div class="meta">
+                                    <span><i class="far fa-calendar-alt"></i> Mar 2025 - Present</span>
+                                    <span><i class="fas fa-map-marker-alt"></i> Pune, Maharashtra</span>
+                                </div>
+                            </div>
+                            <span class="status-badge current">Current</span>
+                        </div>
+                        <div class="product-info">
+                            <i class="fas fa-cube"></i>
+                            <span><strong>Q2C Customer Portal</strong> — Multi-Tenant SaaS for SAP Quote-to-Cash Solutions</span>
+                        </div>
+                        <ul class="achievements-list">
+                            <li>
+                                <i class="fas fa-check"></i>
+                                <span>Architected <strong>config-driven payment orchestration</strong> supporting multiple gateways (Stripe, SpeedPay) — new tenants onboarded via YAML without code changes</span>
+                            </li>
+                            <li>
+                                <i class="fas fa-check"></i>
+                                <span>Implemented <strong>multi-tenant architecture</strong> with ThreadLocal TenantContext, custom interceptors, ensuring complete data isolation</span>
+                            </li>
+                            <li>
+                                <i class="fas fa-check"></i>
+                                <span>Designed enterprise patterns: <strong>Factory, Strategy, Adapter, DAL</strong> — reduced code duplication by 70%</span>
+                            </li>
+                            <li>
+                                <i class="fas fa-check"></i>
+                                <span>Set up <strong>CI/CD with Jenkins + SonarQube</strong> quality gates, automated MR reports to team email</span>
+                            </li>
+                            <li>
+                                <i class="fas fa-check"></i>
+                                <span>Developed <strong>SAP payment posting</strong> with FICA (Public) and FIAR (Private) cloud adapters</span>
+                            </li>
+                            <li>
+                                <i class="fas fa-check"></i>
+                                <span>Built <strong>Angular 19 frontend</strong> with Signals, NgRx, and custom timezone-aware DatePipe</span>
+                            </li>
+                            <li>
+                                <i class="fas fa-check"></i>
+                                <span>Implemented <strong>audit logging with MDC correlation IDs</strong> for distributed tracing</span>
+                            </li>
+                        </ul>
+                        <div class="tech-stack">
+                            <span>Java 17</span>
+                            <span>Spring Boot 3.5</span>
+                            <span>Angular 19</span>
+                            <span>PostgreSQL</span>
+                            <span>Redis</span>
+                            <span>Stripe</span>
+                            <span>SAP OData</span>
+                            <span>SAP BTP</span>
+                            <span>Jenkins</span>
+                            <span>SonarQube</span>
+                            <span>Docker</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- NCDEX -->
+                <div class="timeline-item">
+                    <div class="timeline-marker">
+                        <div class="marker-dot"></div>
+                        <div class="marker-line"></div>
+                    </div>
+                    <div class="timeline-content">
+                        <div class="timeline-header">
+                            <div class="company-logo">
+                                <i class="fas fa-chart-line"></i>
+                            </div>
+                            <div class="company-info">
+                                <h3>NCDEX e Markets Ltd (NeML)</h3>
+                                <p class="role">Deputy Manager — Java Full Stack Developer</p>
+                                <div class="meta">
+                                    <span><i class="far fa-calendar-alt"></i> Jan 2022 - Mar 2025</span>
+                                    <span><i class="fas fa-map-marker-alt"></i> Nagpur, Maharashtra</span>
+                                </div>
+                            </div>
+                            <span class="status-badge">3 Years</span>
+                        </div>
+                        <div class="product-info">
+                            <i class="fas fa-cubes"></i>
+                            <span><strong>E-Auction | NCPS | DigiELV</strong> — Trading & Payment Platforms</span>
+                        </div>
+                        <ul class="achievements-list">
+                            <li>
+                                <i class="fas fa-check"></i>
+                                <span>Built <strong>scalable microservices</strong> with Spring Boot and Circuit Breaker Pattern for agricultural trading platform</span>
+                            </li>
+                            <li>
+                                <i class="fas fa-check"></i>
+                                <span>Integrated <strong>Kafka event-driven architecture</strong> handling 1M+ messages/day, improving responsiveness by 25%</span>
+                            </li>
+                            <li>
+                                <i class="fas fa-check"></i>
+                                <span>Integrated <strong>4 payment gateways</strong> (Razorpay, CCAvenue, Atom, PayU) achieving 99.99% success rate</span>
+                            </li>
+                            <li>
+                                <i class="fas fa-check"></i>
+                                <span>Developed <strong>NCPS</strong> — centralized payment platform reducing infrastructure costs by 20%</span>
+                            </li>
+                            <li>
+                                <i class="fas fa-check"></i>
+                                <span>Optimized <strong>PostgreSQL queries</strong> improving database performance by 30%</span>
+                            </li>
+                            <li>
+                                <i class="fas fa-check"></i>
+                                <span>Led <strong>Dockerized microservices transition</strong> with Jenkins CI/CD pipelines</span>
+                            </li>
+                            <li>
+                                <i class="fas fa-check"></i>
+                                <span>Migrated <strong>legacy .NET to Java 8</strong> with Spring Boot using Factory & Singleton patterns</span>
+                            </li>
+                        </ul>
+                        <div class="tech-stack">
+                            <span>Java 8</span>
+                            <span>Spring Boot</span>
+                            <span>Angular</span>
+                            <span>PostgreSQL</span>
+                            <span>Kafka</span>
+                            <span>Redis</span>
+                            <span>Docker</span>
+                            <span>Jenkins</span>
+                            <span>AWS</span>
+                            <span>JWT</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Education -->
+                <div class="timeline-item education">
+                    <div class="timeline-marker">
+                        <div class="marker-dot education-dot"></div>
+                    </div>
+                    <div class="timeline-content">
+                        <div class="timeline-header">
+                            <div class="company-logo education-logo">
+                                <i class="fas fa-graduation-cap"></i>
+                            </div>
+                            <div class="company-info">
+                                <h3>SGGS Institute of Engineering & Technology</h3>
+                                <p class="role">Bachelor of Technology (B.Tech)</p>
+                                <div class="meta">
+                                    <span><i class="far fa-calendar-alt"></i> Jul 2018 – Jun 2022</span>
+                                    <span><i class="fas fa-map-marker-alt"></i> Nanded, Maharashtra</span>
+                                </div>
+                            </div>
+                            <span class="status-badge gpa">GPA: 8.34/10</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="section-footer">
+                <span class="section-tag">&lt;/experience&gt;</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="skills section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">&lt;skills&gt;</span>
+                <h2 class="section-title">Technical Skills</h2>
+                <p class="section-subtitle">Technologies and tools I work with</p>
+            </div>
+            <div class="skills-grid">
+                <div class="skill-card">
+                    <div class="skill-icon"><i class="fas fa-server"></i></div>
+                    <h3>Backend Development</h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag">Java 17</span>
+                        <span class="skill-tag">Spring Boot 3.5</span>
+                        <span class="skill-tag">Spring Security</span>
+                        <span class="skill-tag">Spring Data JPA</span>
+                        <span class="skill-tag">Hibernate</span>
+                        <span class="skill-tag">RESTful APIs</span>
+                        <span class="skill-tag">Microservices</span>
+                    </div>
+                </div>
+                <div class="skill-card">
+                    <div class="skill-icon"><i class="fas fa-laptop-code"></i></div>
+                    <h3>Frontend Development</h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag">Angular 19</span>
+                        <span class="skill-tag">TypeScript</span>
+                        <span class="skill-tag">Angular Signals</span>
+                        <span class="skill-tag">NgRx</span>
+                        <span class="skill-tag">RxJS</span>
+                        <span class="skill-tag">Angular Material</span>
+                        <span class="skill-tag">HTML5 / SCSS</span>
+                    </div>
+                </div>
+                <div class="skill-card">
+                    <div class="skill-icon"><i class="fas fa-database"></i></div>
+                    <h3>Databases & Messaging</h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag">PostgreSQL</span>
+                        <span class="skill-tag">Redis</span>
+                        <span class="skill-tag">Kafka</span>
+                        <span class="skill-tag">Query Optimization</span>
+                    </div>
+                </div>
+                <div class="skill-card">
+                    <div class="skill-icon"><i class="fas fa-credit-card"></i></div>
+                    <h3>Payment Systems</h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag">Stripe</span>
+                        <span class="skill-tag">Razorpay</span>
+                        <span class="skill-tag">CCAvenue</span>
+                        <span class="skill-tag">PayU</span>
+                        <span class="skill-tag">SpeedPay</span>
+                        <span class="skill-tag">PCI-DSS</span>
+                        <span class="skill-tag">Webhooks</span>
+                    </div>
+                </div>
+                <div class="skill-card">
+                    <div class="skill-icon"><i class="fas fa-cogs"></i></div>
+                    <h3>SAP Technologies</h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag">SAP FICA</span>
+                        <span class="skill-tag">SAP FIAR</span>
+                        <span class="skill-tag">SAP OData</span>
+                        <span class="skill-tag">SAP BTP</span>
+                        <span class="skill-tag">Payment Posting</span>
+                    </div>
+                </div>
+                <div class="skill-card">
+                    <div class="skill-icon"><i class="fas fa-rocket"></i></div>
+                    <h3>DevOps & CI/CD</h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag">Jenkins</span>
+                        <span class="skill-tag">SonarQube</span>
+                        <span class="skill-tag">Docker</span>
+                        <span class="skill-tag">Git / GitLab</span>
+                        <span class="skill-tag">AWS</span>
+                        <span class="skill-tag">CI/CD Pipelines</span>
+                    </div>
+                </div>
+                <div class="skill-card">
+                    <div class="skill-icon"><i class="fas fa-drafting-compass"></i></div>
+                    <h3>Architecture & Patterns</h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag">Multi-Tenant SaaS</span>
+                        <span class="skill-tag">Factory Pattern</span>
+                        <span class="skill-tag">Strategy Pattern</span>
+                        <span class="skill-tag">Adapter Pattern</span>
+                        <span class="skill-tag">DAL Pattern</span>
+                        <span class="skill-tag">Event-Driven</span>
+                    </div>
+                </div>
+                <div class="skill-card">
+                    <div class="skill-icon"><i class="fas fa-vial"></i></div>
+                    <h3>Testing & Quality</h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag">JUnit 5</span>
+                        <span class="skill-tag">Mockito</span>
+                        <span class="skill-tag">Integration Tests</span>
+                        <span class="skill-tag">Quality Gates</span>
+                        <span class="skill-tag">Code Review</span>
+                    </div>
+                </div>
+            </div>
+            <div class="section-footer">
+                <span class="section-tag">&lt;/skills&gt;</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="projects section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">&lt;projects&gt;</span>
+                <h2 class="section-title">Featured Projects</h2>
+                <p class="section-subtitle">Enterprise solutions I've built and contributed to</p>
+            </div>
+            <div class="projects-grid">
+                <div class="project-card featured">
+                    <div class="project-header">
+                        <div class="project-icon"><i class="fas fa-building"></i></div>
+                        <span class="project-badge">Current Project</span>
+                    </div>
+                    <h3 class="project-title">Q2C Customer Portal</h3>
+                    <p class="project-company">Acuiti Labs</p>
+                    <p class="project-description">
+                        Enterprise multi-tenant SaaS platform for SAP Quote-to-Cash solutions. 
+                        Self-service portal enabling customers to manage invoices, payments, disputes, 
+                        and account operations with real-time SAP synchronization.
+                    </p>
+                    <div class="project-features">
+                        <div class="feature"><i class="fas fa-check-circle"></i><span>Multi-tenant architecture with complete isolation</span></div>
+                        <div class="feature"><i class="fas fa-check-circle"></i><span>Config-driven payment orchestration (Stripe, SpeedPay)</span></div>
+                        <div class="feature"><i class="fas fa-check-circle"></i><span>SAP FICA/FIAR payment posting adapters</span></div>
+                        <div class="feature"><i class="fas fa-check-circle"></i><span>Angular 19 with Signals & NgRx</span></div>
+                        <div class="feature"><i class="fas fa-check-circle"></i><span>Jenkins CI/CD with SonarQube quality gates</span></div>
+                    </div>
+                    <div class="project-tech">
+                        <span>Java 17</span><span>Spring Boot 3.5</span><span>Angular 19</span><span>PostgreSQL</span><span>Redis</span><span>SAP</span>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <div class="project-header"><div class="project-icon"><i class="fas fa-gavel"></i></div></div>
+                    <h3 class="project-title">E-Auction Platform</h3>
+                    <p class="project-company">NCDEX e Markets</p>
+                    <p class="project-description">
+                        Real-time agri-commodity trading platform enabling traders to secure best prices 
+                        among multiple bidders. Handles online fund collection and direct bank payouts.
+                    </p>
+                    <div class="project-features">
+                        <div class="feature"><i class="fas fa-check-circle"></i><span>Kafka handling 1M+ messages/day</span></div>
+                        <div class="feature"><i class="fas fa-check-circle"></i><span>Real-time bidding system</span></div>
+                        <div class="feature"><i class="fas fa-check-circle"></i><span>Automated settlement & payouts</span></div>
+                    </div>
+                    <div class="project-tech">
+                        <span>Java</span><span>Spring Boot</span><span>Kafka</span><span>Angular</span><span>PostgreSQL</span><span>AWS</span>
+                    </div>
+                    <p class="project-clients"><strong>Clients:</strong> NAFED, FCI, NCDFI, IFAC</p>
+                </div>
+                <div class="project-card">
+                    <div class="project-header"><div class="project-icon"><i class="fas fa-university"></i></div></div>
+                    <h3 class="project-title">Centralized Payment System (NCPS)</h3>
+                    <p class="project-company">NCDEX e Markets</p>
+                    <p class="project-description">
+                        Unified payment platform consolidating multiple bank payment systems. 
+                        Reduced infrastructure costs by 20% and achieved 99.99% payment success rate.
+                    </p>
+                    <div class="project-features">
+                        <div class="feature"><i class="fas fa-check-circle"></i><span>4 payment gateway integrations</span></div>
+                        <div class="feature"><i class="fas fa-check-circle"></i><span>99.99% payment success rate</span></div>
+                        <div class="feature"><i class="fas fa-check-circle"></i><span>20% infrastructure cost reduction</span></div>
+                    </div>
+                    <div class="project-tech">
+                        <span>Java</span><span>Spring Boot</span><span>PostgreSQL</span><span>Kafka</span><span>Jenkins</span>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <div class="project-header"><div class="project-icon"><i class="fas fa-certificate"></i></div></div>
+                    <h3 class="project-title">DigiELV — CD Trade Platform</h3>
+                    <p class="project-company">NCDEX e Markets</p>
+                    <p class="project-description">
+                        MoRTH-authorized platform for trading Certificates of Deposit with 
+                        VAHAN integration for real-time fund management and settlements.
+                    </p>
+                    <div class="project-features">
+                        <div class="feature"><i class="fas fa-check-circle"></i><span>MoRTH authorized platform</span></div>
+                        <div class="feature"><i class="fas fa-check-circle"></i><span>VAHAN integration</span></div>
+                        <div class="feature"><i class="fas fa-check-circle"></i><span>Real-time settlements</span></div>
+                    </div>
+                    <div class="project-tech">
+                        <span>Java</span><span>Spring Boot</span><span>Angular</span><span>PostgreSQL</span><span>Redis</span>
+                    </div>
+                    <p class="project-clients"><strong>Client:</strong> MMCM (DigiElv)</p>
+                </div>
+            </div>
+            <div class="section-footer">
+                <span class="section-tag">&lt;/projects&gt;</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Achievements Section -->
+    <section id="achievements" class="achievements section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">&lt;achievements&gt;</span>
+                <h2 class="section-title">Achievements</h2>
+                <p class="section-subtitle">Recognition and milestones</p>
+            </div>
+            <div class="achievements-grid">
+                <div class="achievement-card">
+                    <div class="achievement-icon"><i class="fas fa-trophy"></i></div>
+                    <h3>Spot Award</h3>
+                    <p>Recognized for integrating new payment gateway under tight deadlines</p>
+                    <span class="achievement-company">NCDEX e Markets</span>
+                </div>
+                <div class="achievement-card">
+                    <div class="achievement-icon"><i class="fas fa-users"></i></div>
+                    <h3>Best Team of the Quarter</h3>
+                    <p>Led development of centralized payment platform reducing costs by 25%</p>
+                    <span class="achievement-company">NCDEX e Markets</span>
+                </div>
+                <div class="achievement-card">
+                    <div class="achievement-icon"><i class="fas fa-code-branch"></i></div>
+                    <h3>70% Code Reduction</h3>
+                    <p>Through implementation of Strategy and Factory pattern hierarchy</p>
+                    <span class="achievement-company">Acuiti Labs</span>
+                </div>
+                <div class="achievement-card">
+                    <div class="achievement-icon"><i class="fas fa-cog"></i></div>
+                    <h3>Zero-Code Onboarding</h3>
+                    <p>Enabled tenant onboarding entirely through YAML configuration</p>
+                    <span class="achievement-company">Acuiti Labs</span>
+                </div>
+            </div>
+            <div class="section-footer">
+                <span class="section-tag">&lt;/achievements&gt;</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">&lt;contact&gt;</span>
+                <h2 class="section-title">Get In Touch</h2>
+                <p class="section-subtitle">Let's discuss opportunities and collaborations</p>
+            </div>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <div class="info-card">
+                        <h3>Let's Connect</h3>
+                        <p>I'm currently open to new opportunities. Feel free to reach out!</p>
+                        <div class="contact-items">
+                            <div class="contact-item">
+                                <div class="item-icon"><i class="fas fa-envelope"></i></div>
+                                <div class="item-details">
+                                    <span class="item-label">Email</span>
+                                    <a href="mailto:Hanumantlad100@gmail.com">Hanumantlad100@gmail.com</a>
+                                </div>
+                            </div>
+                            <div class="contact-item">
+                                <div class="item-icon"><i class="fas fa-phone"></i></div>
+                                <div class="item-details">
+                                    <span class="item-label">Phone</span>
+                                    <a href="tel:+918766719895">+91 8766719895</a>
+                                </div>
+                            </div>
+                            <div class="contact-item">
+                                <div class="item-icon"><i class="fas fa-map-marker-alt"></i></div>
+                                <div class="item-details">
+                                    <span class="item-label">Location</span>
+                                    <span>Pune, Maharashtra, India</span>
+                                </div>
+                            </div>
+                        </div>
                         <div class="social-links">
-                        <a href="https://www.linkedin.com/in/hanumantlad/" target="_blank"
-                            style="text-decoration: none; color: #007bff; font-size: 32px; transition: transform 0.3s ease, color 0.3s ease;">
-                            <i class="fab fa-linkedin-in"></i>
-                        </a>
-                        <a href="https://github.com/HNLad" target="_blank"
-                            style="text-decoration: none; color: #007bff; font-size: 32px; transition: transform 0.3s ease, color 0.3s ease;">
-                            <i class="fab fa-github"></i>
-                        </a>
-                    </div>
-                    </div>
-                </div>
-                <div class="right-about">
-                    <div class="about-item">
-                        <div class="abt-text">
-                            <p class="large-text">5+</p>
-                            <p class="small-text">Projects <br /> Completed</p>
-                        </div>
-                    </div>
-
-
-                    <div class="about-item">
-                        <div class="abt-text">
-                            <p class="large-text">5+</p>
-                            <p class="small-text">Java <br /> Projects</p>
-                        </div>
-                    </div>
-
-                    <div class="about-item">
-                        <div class="abt-text">
-                            <p class="large-text">5+</p>
-                            <p class="small-text">SpringBoot Applications <br /> Microservice</p>
-                        </div>
-                    </div>
-                    <div class="about-item">
-                        <div class="abt-text">
-                            <p class="large-text">5+</p>
-                            <p class="small-text">PostgreSQL Databases <br /> Projects</p>
-                        </div>
-                    </div>
-                    <div class="about-item">
-                        <div class="abt-text">
-                            <p class="large-text">1+</p>
-                            <p class="small-text">Portfolio Websites <br /> Design</p>
+                            <a href="https://www.linkedin.com/in/Hanumantlad/" target="_blank" class="social-btn"><i class="fab fa-linkedin-in"></i></a>
+                            <a href="https://github.com/HNLad" target="_blank" class="social-btn"><i class="fab fa-github"></i></a>
+                            <a href="https://wa.me/918766719895" target="_blank" class="social-btn"><i class="fab fa-whatsapp"></i></a>
+                            <a href="mailto:Hanumantlad100@gmail.com" class="social-btn"><i class="fas fa-envelope"></i></a>
                         </div>
                     </div>
                 </div>
-            </div>
-        </section>
-        <section class="container skills" id="skills">
-            <div class="main-title">
-                <h2>My <span>Skills</span><span class="bg-text">Skills</span></h2>
-            </div>
-            <div class="skills-content">
-                <div class="skill-category">
-                    <h4 class="category-title">Languages & Frameworks</h4>
-                    <ul class="skills-list">
-                        <li><i class="fas fa-code"></i> Java</li>
-                        <li><i class="fas fa-code"></i> Spring Boot</li>
-                        <li><i class="fas fa-code"></i> Angular</li>
-                        <li><i class="fas fa-code"></i> TypeScript</li>
-                        <li><i class="fas fa-code"></i> JavaScript</li>
-                        <li><i class="fas fa-code"></i> HTML & CSS</li>
-                        <li><i class="fas fa-code"></i> Spring MVC</li>
-                    </ul>
-                </div>
-                <div class="skill-category">
-                    <h4 class="category-title">Databases & Messaging Broker</h4>
-                    <ul class="skills-list">
-                        <li><i class="fas fa-stream"></i> Kafka</li>
-                        <li><i class="fas fa-database"></i> Redis</li>
-                        <li><i class="fas fa-database"></i> PostgreSQL</li>
-                        <li><i class="fas fa-database"></i> Hibernate</li>
-                    </ul>
-                </div>
-                <div class="skill-category">
-                    <h4 class="category-title">DevOps & Cloud</h4>
-                    <ul class="skills-list">
-                        <li><i class="fab fa-docker"></i> Docker</li>
-                        <li><i class="fas fa-cogs"></i> Nginx</li>
-                        <li><i class="fas fa-cogs"></i> Tomcat</li>
-                        <li><i class="fas fa-cogs"></i> Jenkins</li>
-                        <li><i class="fas fa-tools"></i> CI/CD Pipelines</li>
-                        <li><i class="fab fa-aws"></i> AWS (EC2, RDS, ECR & S3)</li>
-                    </ul>
-                </div>
-                <div class="skill-category">
-                    <h4 class="category-title">Version Control & Competencies</h4>
-                    <ul class="skills-list">
-                        <li><i class="fab fa-git-alt"></i> Git</li>
-                        <li><i class="fas fa-code-branch"></i> SVN</li>
-                        <li><i class="fas fa-cloud"></i> RESTful APIs</li>
-                        <li><i class="fas fa-network-wired"></i> Microservices</li>
-                        <li><i class="fas fa-sync"></i> Agile Methodologies</li>
-                        <li><i class="fas fa-shield-alt"></i> Security & Authentication</li>
-                        <li><i class="fas fa-laptop-code"></i> System Design</li>
-                        <li class="mobile-extra"></li>
-                    </ul>
-                </div>
-            </div>
-        </section>
-        <section class="container portfolio" id="portfolio">
-            <div class="main-title">
-                <h2>My <span>Projects</span><span class="bg-text">Portfolio</span></h2>
-            </div>
-            <div class="portfolios">
-                <div class="portfolio-item">
-                    <h4>E-Auction Platform:</h4>
-                    <p>E-Auctions platform enables traders to seamlessly trade Agri-commodities, helping them secure
-                        the best price among multiple bidders. The system facilitates real-time online fund collection
-                        and process
-                        direct payouts into users bank accounts after trade settlement.</p>
-                    <p><strong>Tech Stack:</strong> Java, Spring Boot, Kafka, Angular, PostgreSQL, Redis, AWS</p>
-                </div>
-                <div class="portfolio-item">
-                    <h4>Centralized Payment System: </h4>
-                    <p>Centralized payment platform, integrating multiple bank payment systems with various
-                        applications into one application. This initiative significantly improved transaction processing
-                        time and
-                        reduced infrastructure costs by 20%.</p>
-                    <p><strong>Tech Stack:</strong> Java, Spring Boot, PostgreSQL, Kafka, Jenkins, AWS</p>
-                </div>
-                <div class="portfolio-item">
-                    <h4>DigiELV- Authorized Certificate of Deposit (CD) Trade Platform: </h4>
-                    <p>DigiELV, authorized by MoRTH, is a secure online platform for trading Certificates of Deposit
-                        (CD). It streamlines price discovery, trading, and instant transfer certificate issuance while
-                        ensuring real-time
-                        fund management and settlements through seamless VAHAN integration.</p>
-                    <p><strong>Tech Stack:</strong> Java, PostgreSQL, Kafka, Spring, Spring Boot, Angular, Redis,
-                        Payment Gateway Integration</p>
-                </div>
-            </div>
-        </section>
-        <section class="container contact" id="contact">
-            <div class="contact-container">
-                <div class="main-title">
-                    <h2>Contact <span>Me</span></h2>
-                </div>
-                <div class="contact-content-con">
-                    <div class="left-contact">
-                        <h4>Contact Me</h4>
-                        <p>
-                            Feel free to reach out for collaborations or inquiries. I’m passionate about full-stack
-                            development and open to opportunities.
-                        </p>
-                        <div class="contact-info">
-                            <div class="contact-info-inline">
-                                <div>
-                                    <i class="fas fa-map-marker-alt"></i>
-                                    <span> <strong>Address:</strong> Pune, Maharashtra, India</span>
-                                </div>
-                                <div>
-                                    <i class="fas fa-envelope"></i>
-                                    <span> <strong>Email:</strong> hanumantlad100@gmail.com</span>
-                                </div>
-                                <div>
-                                    <i class="fas fa-phone"></i>
-                                    <span> <strong>Contact:</strong> +91 8766719895</span>
-                                </div>
-                                <div>
-                                    <i class="fab fa-whatsapp"></i>
-                                    <span> <strong>WhatsApp:</strong> +91 8766719895</span>
-                                </div>
-                                <div>
-                                    <i class="fas fa-user-graduate"></i>
-                                    <span> <strong>Education:</strong> B.Tech</span>
-                                </div>
-                                <div>
-                                    <i class="fas fa-globe-africa"></i>
-                                    <span> <strong>Languages:</strong> Marathi, Hindi, English</span>
-                                </div>
+                <div class="contact-form-wrapper">
+                    <form class="contact-form" id="contactForm">
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="name">Your Name</label>
+                                <input type="text" id="name" name="name" placeholder="Please enter your name" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="email">Your Email</label>
+                                <input type="email" id="email" name="email" placeholder="Please enter your email" required>
                             </div>
                         </div>
-                        <div class="contact-icons"
-                            style="display: flex; gap: 20px; justify-content: center; margin-top: 20px;">
-                            <a href="https://www.linkedin.com/in/hanumantlad/" target="_blank"
-                                style="text-decoration: none; color: #007bff; font-size: 32px; transition: transform 0.3s ease, color 0.3s ease;">
-                                <i class="fab fa-linkedin-in"></i>
-                            </a>
-                            <a href="https://github.com/HNLad" target="_blank"
-                                style="text-decoration: none; color: #007bff; font-size: 32px; transition: transform 0.3s ease, color 0.3s ease;">
-                                <i class="fab fa-github"></i>
-                            </a>
+                        <div class="form-group">
+                            <label for="subject">Subject</label>
+                            <input type="text" id="subject" name="subject" placeholder="Subject" required>
                         </div>
-                    </div>
-                    <div class="right-contact">
-                        <form action="" class="contact-form">
-                            <div class="input-control i-c-2">
-                                <input type="text" required placeholder="Your Name">
-                                <input type="email" required placeholder="Your Email">
-                            </div>
-                            <div class="input-control">
-                                <input type="text" required placeholder="Enter Subject">
-                            </div>
-                            <div class="input-control">
-                                <textarea cols="15" rows="6" placeholder="Message Here..." required></textarea>
-                            </div>
-                            <div class="submit-btn">
-                                <a href="mailto:hanumantlad100@gmail.com" class="main-btn">
-                                    <span class="btn-text">Submit</span>
-                                    <span class="btn-icon"><i class="fa fa-check"></i></span>
-                                </a>
-                            </div>
-                        </form>
-                    </div>
+                        <div class="form-group">
+                            <label for="message">Message</label>
+                            <textarea id="message" name="message" rows="5" placeholder="Tell me about your project/opportunities..." required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary btn-full">
+                            <span>Send Message</span>
+                            <i class="fas fa-paper-plane"></i>
+                        </button>
+                    </form>
                 </div>
             </div>
-        </section>
-    </main>
+            <div class="section-footer">
+                <span class="section-tag">&lt;/contact&gt;</span>
+            </div>
+        </div>
+    </section>
 
-    <div class="controls">
-        <div class="control active-btn" data-id="home" title="Home"><i class="fas fa-home"></i></div>
-        <div class="control" data-id="about" title="About Me"><i class="fas fa-user"></i></div>
-        <div class="control" data-id="skills" title="Skills"><i class="fas fa-briefcase"></i></div>
-        <div class="control" data-id="portfolio" title="Projects"><i class="fas fa-folder-open"></i></div>
-        <div class="control" data-id="contact" title="Contact"><i class="fas fa-envelope"></i></div>
-    </div>
-
-    <div class="theme-btn">
-        <i class="fas fa-adjust"></i>
-    </div>
-    <footer>
-        <p>&copy; 2025 Hanumant Lad. All Rights Reserved.</p>
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <span class="logo-bracket">&lt;</span>
+                    <span class="logo-text">CL</span>
+                    <span class="logo-bracket">/&gt;</span>
+                </div>
+                <p class="footer-tagline">Building scalable solutions with clean code.</p>
+                <div class="footer-links">
+                    <a href="#home">Home</a>
+                    <a href="#about">About</a>
+                    <a href="#experience">Experience</a>
+                    <a href="#skills">Skills</a>
+                    <a href="#projects">Projects</a>
+                    <a href="#contact">Contact</a>
+                </div>
+                <div class="footer-social">
+                    <a href="https://www.linkedin.com/in/Hanumantlad/" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="https://github.com/HNLad" target="_blank"><i class="fab fa-github"></i></a>
+                    <a href="mailto:Hanumantlad100@gmail.com"><i class="fas fa-envelope"></i></a>
+                </div>
+                <p class="copyright">&copy; 2025 Hanumant Lad. All Rights Reserved.</p>
+            </div>
+        </div>
     </footer>
+
+    <!-- Back to Top -->
+    <button class="back-to-top" id="backToTop"><i class="fas fa-arrow-up"></i></button>
+
     <script src="app.js"></script>
 </body>
-
 </html>
