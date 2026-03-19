@@ -101,7 +101,7 @@ function initTypingEffect() {
     const typingText = document.getElementById('typingText');
     const phrases = [
         'Senior Java Full Stack Developer',
-        'Multi-Tenant SaaS Architect',
+        'Multi-Tenant PaaS Architect',
         'Payment Systems Specialist',
         'Microservices Engineer'
     ];
