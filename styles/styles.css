@@ -600,8 +600,14 @@ img {
 .annotation { color: #ffcb6b; }
 .method { color: #82aaff; }
 
+.hero-right { position: relative; }
+
 .floating-badges {
     position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
 }
 
 .float-badge {
@@ -615,26 +621,27 @@ img {
     box-shadow: var(--card-shadow);
     font-size: 0.8rem;
     font-weight: 500;
+    white-space: nowrap;
     animation: float 3s ease-in-out infinite;
+    --x: 0;
+    --y: 0;
 }
 
-.float-badge i {
-    color: var(--accent-primary);
-}
+.float-badge i { color: var(--accent-primary);}
 
 .badge-1 { top: -20px; right: 20px; animation-delay: 0s; }
 .badge-2 { top: 20px; left: -30px; animation-delay: 0.5s; }
-.badge-3 { top: 50%; right: -50px; transform: translateY(-50%); animation-delay: 1s; }
+.badge-3 { top: 50%; right: -50px; --y: -50%; animation-delay: 1s; }
 .badge-4 { bottom: -20px; right: 20px; animation-delay: 1.5s; }
 .badge-5 { bottom: -30px; left: 20px; animation-delay: 2s; }
-.badge-6 { top: 50%; left: -50px; transform: translateY(-50%); animation-delay: 2.5s; }
+.badge-6 { top: 50%; left: -50px; --y: -50%; animation-delay: 2.5s; }
 
 @keyframes float {
     0%, 100% {
-        transform: translate(var(--x, 0), var(--y, 0));
+        transform: translate(var(--x), var(--y));
     }
     50% {
-        transform: translate(var(--x, 0), calc(var(--y, 0) - 10px));
+        transform: translate(var(--x), calc(var(--y) - 10px));
     }
 }
 
