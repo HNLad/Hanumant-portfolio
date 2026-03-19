@@ -149,45 +149,27 @@
                     </div>
                     <div class="window-content">
                         <pre><code><span class="line-num">1</span>  <span class="keyword">@Component</span>
-                <span class="line-num">2</span>  <span class="keyword">public class</span> <span class="class-name">HanumantLad</span> <span class="keyword">implements</span> <span class="interface">Developer</span> {
-                <span class="line-num">3</span>  
-                <span class="line-num">4</span>      <span class="keyword">private final</span> String role = <span class="string">"Senior Java Full Stack Developer"</span>;
-                <span class="line-num">5</span>      <span class="keyword">private final int</span> yearsOfExperience = <span class="number">4+</span>;
-                <span class="line-num">6</span>  
-                <span class="line-num">7</span>      <span class="keyword">private final</span> List&lt;String&gt; backend = List.of(
-                <span class="line-num">8</span>          <span class="string">"Java 17"</span>, <span class="string">"Spring Boot 3.x"</span>, <span class="string">"Spring Security"</span>,
-                <span class="line-num">9</span>          <span class="string">"Microservices"</span>, <span class="string">"Kafka"</span>, <span class="string">"RESTful APIs"</span>
-                <span class="line-num">10</span>     );
-                <span class="line-num">11</span> 
-                <span class="line-num">12</span>     <span class="keyword">private final</span> List&lt;String&gt; frontend = List.of(
-                <span class="line-num">13</span>         <span class="string">"Angular 19"</span>, <span class="string">"TypeScript"</span>, <span class="string">"NgRx"</span>, <span class="string">"Signals"</span>
-                <span class="line-num">14</span>     );
-                <span class="line-num">15</span> 
-                <span class="line-num">16</span>     <span class="keyword">private final</span> List&lt;String&gt; database = List.of(
-                <span class="line-num">17</span>         <span class="string">"PostgreSQL"</span>, <span class="string">"Redis"</span>, <span class="string">"Hibernate"</span>
-                <span class="line-num">18</span>     );
-                <span class="line-num">19</span> 
-                <span class="line-num">20</span>     <span class="keyword">private final</span> List&lt;String&gt; devOps = List.of(
-                <span class="line-num">21</span>         <span class="string">"Kubernetes"</span>, <span class="string">"Helm"</span>, <span class="string">"SAP BTP Kyma"</span>,
-                <span class="line-num">22</span>         <span class="string">"Docker"</span>, <span class="string">"Jenkins"</span>, <span class="string">"AWS"</span>
-                <span class="line-num">23</span>     );
-                <span class="line-num">24</span> 
-                <span class="line-num">25</span>     <span class="keyword">private final</span> List&lt;String&gt; expertise = List.of(
-                <span class="line-num">26</span>         <span class="string">"Multi-Tenant PaaS Architecture"</span>,
-                <span class="line-num">27</span>         <span class="string">"Payment Orchestration Systems"</span>,
-                <span class="line-num">28</span>         <span class="string">"SAP Integration (FICA/FIAR)"</span>,
-                <span class="line-num">29</span>         <span class="string">"Design Patterns (Factory, Strategy, Adapter)"</span>
-                <span class="line-num">30</span>     );
-                <span class="line-num">31</span> 
-                <span class="line-num">32</span>     <span class="annotation">@Override</span>
-                <span class="line-num">33</span>     <span class="keyword">public</span> Solution <span class="method">solve</span>(Problem problem) {
-                <span class="line-num">34</span>         <span class="keyword">return</span> DesignPatterns
-                <span class="line-num">35</span>             .using(<span class="class-name">Factory</span>, <span class="class-name">Strategy</span>, <span class="class-name">Adapter</span>)
-                <span class="line-num">36</span>             .apply(problem)
-                <span class="line-num">37</span>             .withQuality(<span class="string">"Production-Ready"</span>)
-                <span class="line-num">38</span>             .build();
-                <span class="line-num">39</span>     }
-                <span class="line-num">40</span> }</code></pre>
+<span class="line-num">2</span>  <span class="keyword">public class</span> <span class="class-name">HanumantLad</span> <span class="keyword">implements</span> <span class="interface">Developer</span> {
+<span class="line-num">3</span>  
+<span class="line-num">4</span>      <span class="keyword">private final</span> String role = <span class="string">"Senior Java Full Stack Developer"</span>;
+<span class="line-num">5</span>      <span class="keyword">private final int</span> experience = <span class="number">4</span>;
+<span class="line-num">6</span>  
+<span class="line-num">7</span>      <span class="keyword">private final</span> List&lt;String&gt; expertise = List.of(
+<span class="line-num">8</span>          <span class="string">"Multi-Tenant PaaS Architecture"</span>,
+<span class="line-num">9</span>          <span class="string">"Payment Orchestration Systems"</span>,
+<span class="line-num">10</span>         <span class="string">"SAP Integration (FICA/FIAR)"</span>,
+<span class="line-num">11</span>         <span class="string">"Microservices & Design Patterns"</span>
+<span class="line-num">12</span>     );
+<span class="line-num">13</span> 
+<span class="line-num">14</span>     <span class="annotation">@Override</span>
+<span class="line-num">15</span>     <span class="keyword">public</span> Solution <span class="method">solve</span>(Problem problem) {
+<span class="line-num">16</span>         <span class="keyword">return</span> DesignPatterns
+<span class="line-num">17</span>             .using(<span class="class-name">Factory</span>, <span class="class-name">Strategy</span>, <span class="class-name">Adapter</span>)
+<span class="line-num">18</span>             .apply(problem)
+<span class="line-num">19</span>             .withQuality(<span class="string">"Production-Ready"</span>)
+<span class="line-num">20</span>             .build();
+<span class="line-num">21</span>     }
+<span class="line-num">22</span> }</code></pre>
                     </div>
                 </div>
                 <div class="floating-badges">
@@ -196,12 +178,24 @@
                         <span>Java 17</span>
                     </div>
                     <div class="float-badge badge-2">
+                        <i class="fas fa-leaf"></i>
+                        <span>Spring Boot 3.x</span>
+                    </div>
+                    <div class="float-badge badge-3">
                         <i class="fab fa-angular"></i>
                         <span>Angular 19</span>
                     </div>
-                    <div class="float-badge badge-3">
-                        <i class="fas fa-leaf"></i>
-                        <span>Spring Boot</span>
+                    <div class="float-badge badge-4">
+                        <i class="fas fa-database"></i>
+                        <span>PostgreSQL</span>
+                    </div>
+                    <div class="float-badge badge-5">
+                        <i class="fas fa-dharmachakra"></i>
+                        <span>Kubernetes</span>
+                    </div>
+                    <div class="float-badge badge-6">
+                        <i class="fas fa-cubes"></i>
+                        <span>Microservices</span>
                     </div>
                 </div>
             </div>
